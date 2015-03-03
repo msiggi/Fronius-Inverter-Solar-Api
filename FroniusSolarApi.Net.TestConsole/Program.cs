@@ -12,8 +12,11 @@ namespace FroniusSolarApi.TestConsole
             while (true)
             {
                 var values = new FroniusSolarApi.SolarState("192.168.121.90", 1).GetValues();
+                
                 Console.WriteLine(string.Concat("Day-Energy: ", values.DayEnergy));
+                Console.WriteLine(string.Concat("Total-Energy: ", values.TotalEnergy));
                 Console.WriteLine(string.Concat("Current Power: ", values.CurrentPower));
+
                 System.Threading.Thread.Sleep(2000);
             }
 
